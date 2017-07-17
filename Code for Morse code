@@ -1,0 +1,151 @@
+#include <iostream>
+
+using namespace std;
+
+void morceCode();
+
+int main()
+{
+
+    morceCode();
+
+    return 0;
+}
+
+void morceCode(){
+
+    bool wrongLetter;
+
+    do{
+    string userWord;
+
+    cout << "Input the word:";
+    cin >> userWord;
+    cout << endl;
+
+    string word[userWord.length()];
+
+    int x = userWord.length();
+
+    for(int a = 0,b = 0; a < x;a++,b++){
+
+    word[a]=userWord.at(b);
+
+    }
+
+    cout << "In Morse language:";
+
+    for(int c = 0; c < x; c++){
+
+        if(word[c]=="a"||word[c]=="A"){
+            cout << ".- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="b"||word[c]=="B"){
+            cout << "-... ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="c"||word[c]=="C"){
+            cout << "-.-. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="d"||word[c]=="D"){
+            cout << "-.. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="e"||word[c]=="E"){
+            cout << ". ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="f"||word[c]=="F"){
+            cout << "..-. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="g"||word[c]=="G"){
+            cout << "--. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="h"||word[c]=="H"){
+            cout << ".... ";
+        }
+        else if(word[c]=="i"||word[c]=="I"){
+            cout << ".. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="j"||word[c]=="J"){
+            cout << ".--- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="k"||word[c]=="K"){
+            cout << "-.- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="l"||word[c]=="L"){
+            cout << ".-.. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="m"||word[c]=="M"){
+            cout << "-- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="n"||word[c]=="N"){
+            cout << "-. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="o"||word[c]=="O"){
+            cout << "--- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="p"||word[c]=="P"){
+            cout << ".--. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="q"||word[c]=="Q"){
+            cout << "--.- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="r"||word[c]=="R"){
+            cout << ".-. ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="s"||word[c]=="S"){
+            cout << "... ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="t"||word[c]=="T"){
+            cout << "- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="u"||word[c]=="U"){
+            cout << "..- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="v"||word[c]=="V"){
+            cout << "...- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="w"||word[c]=="W"){
+            cout << ".-- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="x"||word[c]=="X"){
+            cout << "-..- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="y"||word[c]=="Y"){
+            cout << "-.-- ";
+            wrongLetter = false;
+        }
+        else if(word[c]=="z"||word[c]=="Z"){
+            cout << "--.. ";
+            wrongLetter = false;
+        }
+        else{
+            cout << endl <<"Your word has invalid letter, write word again please." << endl << endl;
+            wrongLetter = true;
+            break;
+        }
+    }
+
+}while(wrongLetter == true);
+}
